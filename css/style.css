@@ -1,0 +1,114 @@
+body{
+    min-height: 100vh;
+    padding: 5vh 1vw;
+    box-sizing: border-box;
+}
+
+.box{
+    height: 80vh;
+    max-height: 500px;
+    max-width: 300px;
+    box-sizing: border-box;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    min-width: 260px;
+    top: 50%;
+    left: 50%;
+
+}
+
+.page{
+    margin: auto;
+    height: 80vh;
+    max-height: 500px;
+    width: 100%;
+    border-radius: 5px;
+    background-color: rgb(218, 20, 20);
+    top: 0;
+    left: 0;
+    position: absolute;
+    box-sizing: border-box;
+    transform-origin: left;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    transition: 0.4s;
+    flex-direction: column;
+}
+
+.page_active{
+    transform: perspective(1000px) rotateY(-150deg);
+    transition: 0.4s;
+}
+
+.page_open{
+    padding: 20px;
+    height: 80vh;
+    max-height: 500px;
+    width: 100%;
+    border-radius: 5px;
+    background-color: rgb(255, 179, 0);
+    top: 0;
+    left: 0;
+    position: absolute;
+    box-sizing: border-box;
+    transform-origin: left;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    line-height: 43px;
+}
+
+.swiper{
+    width: 100%;
+
+}
+
+.swiper-slide img{
+    width: 100%;
+}
+
+button{
+    border: none;
+    background-color: transparent;
+    font-size: 23px;
+    color: white;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.page_active button{
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.page_active .swiper{
+    opacity: 0;
+    transition: 0.4s;
+}
+.button__indication{
+    font-size: 25px;
+    display: block;
+    position: relative;
+    top: 5px;
+    color: rgb(236, 208, 1);
+    transition: 0.5s;
+    animation: indication 1s infinite linear alternate-reverse;
+
+}
+
+.button__indication:hover{
+    text-decoration: underline;
+}
+
+@keyframes indication{
+    0%{
+        transform: scale(1);
+    }
+
+    100%{
+        transform: scale(1.2);
+    }
+}
+
